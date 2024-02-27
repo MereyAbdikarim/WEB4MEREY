@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,700;1,500&family=Montserrat:ital,wght@0,200;0,700;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>sign up</title>
+    <style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    margin: 0; 
+    flex-direction: column;
+    background-color: rgb(11, 12, 23);
+}
+.signup_container {
+    text-align: center;
+    max-width: 400px; 
+    width: 100%;
+}
+.signup_container input{
+    background: transparent;
+    width: 300px;
+    color: snow;
+    height: 35px;
+    border: 2px solid rgb(77, 83, 150);
+    border-radius: 15px;
+    padding-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+ #username{
+    width: 135px;
+    text-align: start;
+    margin-right: 2.5px;
+}
+#email{
+    width: 135px;
+    text-align: start;
+    margin-left: 2.5px;
+}
+.signup_container input::placeholder{
+    color: snow;
+}
+
+.signup_text {
+    font-size: 1.3rem;
+    position: absolute;
+    left: 20px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 700;
+    top: 20px;    
+    color: snow;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.signupBtn {
+    background-color: rgb(77, 83, 150);
+    color: snow;
+    font-family: 'Exo', sans-serif;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 320px;
+    font-weight: 600;
+    font-style: italic;
+    height: 35px;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+
+}
+.signUp{
+    color: rgb(77, 83, 150);
+    position: relative;
+    left: -45px;
+}
+.signUp a{
+    text-decoration: none;
+    color: rgb(77, 83, 150);
+    margin-left: 10px;
+    transition: .1s ease-in;
+}
+.signUp a:hover{
+    color: snow;
+    position: center;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    color: snow;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.already {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+    word-spacing: 5px;
+    bottom: -40%;
+}
+.already p{
+    font-size: 18px;
+    color: white;
+}
+.already a{
+    text-decoration: none;
+    padding-left: 15px;
+    font-size: 20px;
+    color: rgb(77, 83, 150);
+    transition: .1s ease-in;
+}
+.already a:hover{
+    color: snow;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="signup_container">
+        <h2 class="signup_text">REGISTRATION FORM</h2>
+        <form action="/signup" method="post" id="signUp">
+            <div class="form-group name-email">
+                <input type="text" id="username" name="username" class="form-control" placeholder="USERNAME"  required>
+                <input type="email" id="email" name="email" class="form-control"  placeholder="EMAIL" required>
+            </div>
+
+
+            <div class="form-group">
+                <input type="password" id="password" name="password" class="form-control"  placeholder="PASSWORD" required>
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="Rpassword" name="Rpassword" class="form-control"  placeholder="REPEAT PASSWORD" required>
+            </div>
+        
+            <button type="submit" class="signupBtn">SIGN UP</button>
+        </form>
+        <div class="already">
+            <p>Already have an account?</p>
+            <a href="/login">Login</a>
+        </div>
+        
+    </div>
+    
+    <footer class="text-center mt-5 py-3 bg-dark fixed-bottom">
+        <p class="text-white">Merey Abdikarim | SE-2201</p>
+    </footer>
+
+    <script src="/client.js"></script>
+</body>
+</html>

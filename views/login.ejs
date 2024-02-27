@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,700;1,500&family=Montserrat:ital,wght@0,200;0,700;1,400&family=Ubuntu&display=swap" rel="stylesheet">
+    <title>BOOKING OF AVIATICKETS</title>
+    <style>
+        body {
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            margin: 0; 
+            flex-direction: column;
+            background-color: rgb(77, 83, 150);
+            display: flex;
+        }
+        .login_container {
+            max-width: 400px; 
+            width: 100%;
+            text-align: center;
+        }
+        .login_container input{
+            width: 300px;
+            height: 35px;
+            border: 2px solid #082352;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 15px;
+            padding-left: 15px;
+            color: snow;
+            background: transparent;
+        }
+        .login_container input::placeholder{
+            color: #fff;
+        }
+        .welcome_text {
+            position: absolute;
+            left: 20px;
+            top: 20px;    
+            color: snow;
+            font-family: 'Exo', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .loginBtn {
+            color: rgb(77, 83, 150);
+            font-family: 'Exo', sans-serif;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+            font-weight: 600;
+            font-style: italic;
+            height: 35px;
+            border: none;
+            border-radius: 20px;
+            position: relative;
+            background-color:#dccba7;
+        }
+        .dont {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: center;
+            position: relative;
+            word-spacing: 5px;
+            display: flex;
+            bottom: -40%;
+        }
+        .dont p{
+            color: white;
+            font-size: 18px;
+        }
+        .dont a{
+            padding-left: 15px;
+            font-size: 20px;
+            color: #dccba7;
+            transition: .1s ease-in;
+            text-decoration: none;
+        }
+        .dont a:hover{
+            color: snow;
+        }
+        footer{
+            bottom: 0;
+            color: snow;
+            font-size: 16px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <h2 class="text-center">LOGIN</h2>
+        <div id="map" class="mb-5"></div>
+    </div>
+    <div class="login_container">
+        <h2 class="welcome_text">BOOKING OF AVIATICKETS</h2>
+        <form action="/login" method="post">
+            <div class="form-group">
+                <input type="text" id="username" name="username" class="form-control" placeholder="USERNAME" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" class="form-control"  placeholder="PASSWORD" required>
+            </div>
+            <button type="submit" class="loginBtn" >LOGIN</button>
+        </form>
+        <div class="dont">
+            <p class="signUp"> You don't have an account? /<a href="/signup">Sign Up</a>
+            </p>
+        </div>
+    </div>
+    <footer class="text-center mt-5 py-3 bg-dark fixed-bottom">
+        <p class="text-white"> Merey Abdikarim | SE-2201 </p>
+    </footer>
+    <script>
+    </script>
+</body>
+</html>
